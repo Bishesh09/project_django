@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block booksection %}
+<div class="card shadow">
+	<div class="card-header">
+		<h5>ADD NEW BOOK </h5>
+	</div>
+	<div class="card-body">
+		<form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="submit" />
+		</form>
+	</div>
+</div>
+{% endblock %}
